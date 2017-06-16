@@ -286,7 +286,7 @@ if (buildWithTinker()) {
 一切就绪
 ### 4. 自留bug
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/2249474-c801e3c1bc7ad846.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![1.png](http://upload-images.jianshu.io/upload_images/2249474-c801e3c1bc7ad846.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 我写了一个简单的界面，第一个Button用来弹出上面TextView中的文字，第二个Button用来添加热修复补丁，此时上方的TextView我是没有进行初始化的
 ```
@@ -346,7 +346,7 @@ tv_test = (TextView) findViewById(R.id.tv_test);
 这个时候使用Tinker生成补丁，有几种生成的方式，下面讲述我觉得最简单的方式
 as的工作区域右上角有一个侧着的Gradle
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/2249474-ba2aee79a338dcab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![2.png](http://upload-images.jianshu.io/upload_images/2249474-ba2aee79a338dcab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 此时我们使用的是debug包，所以双击tinkerPatchDebug，等到它操作完成，我看到有人说这一步会有成功的提示，可是我一直没看到过，等它状态处转圈结束，在`app\build\outputs\tinkerPatch\debug`下会生成一堆文件，我们只需要`patch_signed_7zip.apk`
 由于代码中我们指定的补丁路径就是根目录，所以直接将这个文件复制到手机根目录
 重新打开程序，点击`Load Patch`
@@ -356,7 +356,7 @@ as的工作区域右上角有一个侧着的Gradle
 ```
 这个是因为权限没给，去权限管理中允许权限，重新点击，几秒钟之后程序自己关闭了，重新打开，点击`Show Text Above`
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/2249474-f3818ff032d43a1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![3.png](http://upload-images.jianshu.io/upload_images/2249474-f3818ff032d43a1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 bug被修复
 
@@ -365,7 +365,7 @@ bug被修复
 ### 6. 需要注意的几点
 I. 最后加载patch的时候程序自己结束了，这样在实际项目中肯定是不允许的，我们可以把官方的demo中的一个工具类拿过来，demo中在加载patch之后弹出了success的Toast，这个我们也不需要，找出来去掉即可
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/2249474-e729590f94813975.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![4.png](http://upload-images.jianshu.io/upload_images/2249474-d09b8e160cfc15b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 II. 生成的补丁文件建议不要使用apk作为后缀，并且设置合理路径
 
