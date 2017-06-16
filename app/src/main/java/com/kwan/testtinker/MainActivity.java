@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//修复时记得放开
 //        tv_test = (TextView) findViewById(R.id.tv_test);
 
         findViewById(R.id.btn_show_text).setOnClickListener(new View.OnClickListener() {
