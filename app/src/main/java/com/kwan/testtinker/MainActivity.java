@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv_test = (TextView) findViewById(R.id.tv_test);
+//        tv_test = (TextView) findViewById(R.id.tv_test);
 
         findViewById(R.id.btn_show_text).setOnClickListener(new View.OnClickListener() {
             @Override
