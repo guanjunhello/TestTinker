@@ -360,7 +360,7 @@ as的工作区域右上角有一个侧着的Gradle
 
 bug被修复
 
-######`签名包也是按上述操作，因为我们已经在build.gradle中配置了release信息，所以只需要如上双击tinkerPatchRelease即可，不过生成的patch文件路径有些许差别`
+###### `签名包也是按上述操作，因为我们已经在build.gradle中配置了release信息，所以只需要如上双击tinkerPatchRelease即可，不过生成的patch文件路径有些许差别`
 
 ### 6. 需要注意的几点
 I. 最后加载patch的时候程序自己结束了，这样在实际项目中肯定是不允许的，我们可以把官方的demo中的一个工具类拿过来，demo中在加载patch之后弹出了success的Toast，这个我们也不需要，找出来去掉即可
