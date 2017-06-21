@@ -335,7 +335,9 @@ ext {
 }
 ```
 其中`app-debug-0616-10-48-43`就是刚才我生成的apk
+
 `Sync Now`
+
 然后现在去修复自留的bug
 ```
 setContentView(R.layout.activity_main);
@@ -347,6 +349,7 @@ tv_test = (TextView) findViewById(R.id.tv_test);
 as的工作区域右上角有一个侧着的Gradle
 
 ![2.png](http://upload-images.jianshu.io/upload_images/2249474-ba2aee79a338dcab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 此时我们使用的是debug包，所以双击tinkerPatchDebug，等到它操作完成，我看到有人说这一步会有成功的提示，可是我一直没看到过，等它状态处转圈结束，在`app\build\outputs\tinkerPatch\debug`下会生成一堆文件，我们只需要`patch_signed_7zip.apk`
 由于代码中我们指定的补丁路径就是根目录，所以直接将这个文件复制到手机根目录
 重新打开程序，点击`Load Patch`
